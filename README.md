@@ -1,4 +1,6 @@
 # responsive-images
+=======================
+
 jquery.responsive-images.js is a jQuery plugin that set appopriate image URL based on device width.
 
 Plugin sets attribute ('src' by default) for the image or 'background-image' style for other tags. 
@@ -10,42 +12,54 @@ There are two plugin modes:
 * 'layout' mode check layout.media for document and set layout.width for images (default mode)
 * 'fluid' mode set document width for images. Images with width more than fluid.edge will use there original URL
 
-* * *
-js:
-    
-    $(selector).resImages([options]);
+Usage
+-----
 
-default options:
+#### initialization:
 
-    {
-        attribute: 'src',
-        layout: [
-            { name: 'MOBILE', media: 'only screen and (max-width: 639px)', width: '640' },
-            { name: 'TABLET', media: 'only screen and (min-width: 640px) and (max-width: 1023px)', width: '1024' },
-            { name: 'DESKTOP', media: 'only screen and (min-width: 1024px)', width: '-1' }
-        ],
-        fluid: {
-            mode: false,
-            edge: 1024
-        }
+```javascript
+$(selector).resImages([options]);
+```
+
+#### default options:
+---------------
+
+```javascript
+{
+    attribute: 'src',
+    layout: [
+        { name: 'MOBILE', media: 'only screen and (max-width: 639px)', width: '640' },
+        { name: 'TABLET', media: 'only screen and (min-width: 640px) and (max-width: 1023px)', width: '1024' },
+        { name: 'DESKTOP', media: 'only screen and (min-width: 1024px)', width: '-1' }
+    ],
+    fluid: {
+        mode: false,
+        edge: 1024
     }
+}
+```
 
-html:
+#### html:
 
-    <img data-src="img" [attr] />
+```html
+<img data-src="img" [attr] />
+```
+
 or 
 
-    <div data-bg-src="background/img" [attr]></div>
+```html
+<div data-bg-src="background/img" [attr]></div>
+```
 
 where:
 
-    - data-src = "img",
-      data-bg-src = "background/img" (image URL)
+* `data-src = "img"`,
+  `data-bg-src = "background/img"` (image URL)
 
 [attr]:
 
-    - data-src-deny = "layout1[,layout2]" (avoid image loading for specific layout(s))
-    - data-src-original = "layout1[,layout2]" (load original image size for specific layout(s))
-    - data-src-original = "all" (load original image size for all layouts)
-    - data-fluid-mode (empty attribute to use fluid width mode)
-    - data-fluid-edge = "width" (change default maximum image width for fluid mode)
+* `data-src-deny = "layout1[,layout2]"` (avoid image loading for specific layout(s))
+* `data-src-original = "layout1[,layout2]"` (load original image size for specific layout(s))
+* `data-src-original = "all"` (load original image size for all layouts)
+* `data-fluid-mode` (empty attribute to use fluid width mode)
+* `data-fluid-edge = "width"` (change default maximum image width for fluid mode)
