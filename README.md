@@ -58,13 +58,10 @@ where:
 * `data-src = "img"`,
   `data-bg-src = "background/img"` (image URL)
 
-```html
-[attr]
-```
-:
+* `[attr]` :
 
-* `data-src-deny = "layout1[,layout2]"` (avoid image loading for specific layout(s))
-* `data-src-original = "layout1[,layout2]"` (load original image size for specific layout(s))
-* `data-src-original = "all"` (load original image size for all layouts)
-* `data-fluid-mode` (empty attribute to use fluid width mode)
-* `data-fluid-edge = "width"` (change default maximum image width for fluid mode)
+    * `data-src-deny = "layout1[,layout2]"` (avoid image loading for specific layout(s))
+    * `data-src-original = "layout1[,layout2]"` (load original image size for specific layout(s))
+    * `data-src-original = "all"` (load original image size for all layouts)
+    * `data-fluid-mode` (empty attribute to use fluid width mode)
+    * `data-fluid-edge = "width"` (change default maximum image width for fluid mode)
