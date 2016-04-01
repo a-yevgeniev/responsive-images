@@ -1,7 +1,10 @@
-# responsive-images
+responsive-images
 =======================
 
 jquery.responsive-images.js is a jQuery plugin that set appopriate image URL based on device width.
+
+Description
+-----------
 
 Plugin sets attribute ('src' by default) for the image or 'background-image' style for other tags. 
 Original image URL should be set in the 'data-src' or 'data-bg-src' attributes.
@@ -22,7 +25,6 @@ $(selector).resImages([options]);
 ```
 
 #### default options:
----------------
 
 ```javascript
 {
@@ -56,7 +58,10 @@ where:
 * `data-src = "img"`,
   `data-bg-src = "background/img"` (image URL)
 
-[attr]:
+```html
+[attr]
+```
+:
 
 * `data-src-deny = "layout1[,layout2]"` (avoid image loading for specific layout(s))
 * `data-src-original = "layout1[,layout2]"` (load original image size for specific layout(s))
